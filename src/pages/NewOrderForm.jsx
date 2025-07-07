@@ -205,6 +205,8 @@ function NewOrderForm() {
   const [multiSelect, setMultiSelect] = useState([]);
   const [singleSelect, setSingleSelect] = useState('');
   const [hasCap, setHasCap] = useState(false);
+  const [showVcut, setShowVcut] = useState(false);
+  const [glueSeal, setGlueSeal] = useState(false);
   
   const [formData, setFormData] = useState({
     PL: '',
@@ -840,19 +842,6 @@ function NewOrderForm() {
         )}
 
          {bagType === 'sideSeal' && (
-           <FormRow label="glueLid">
-            <Label>
-              <input
-                type="checkbox"
-                checked={hasCap}
-                onChange={() => setHasCap(!hasCap)}
-                />
-                : ฝากาว
-              </Label>
-          </FormRow>
-        )}
-
-         {bagType === 'sideSeal' && (
            <FormRow>
           <Label>เปิด :</Label>
         <RadioGroup>
@@ -906,6 +895,19 @@ function NewOrderForm() {
             <Input type='text' placeholder='0.00'/>
             <Label>ติดวาวล์ :</Label>
             <Input type='text' placeholder='0.00'/>
+          </FormRow>
+        )}
+
+        {bagType === 'sideSeal' && (
+           <FormRow>
+            <Label>
+              <input
+                type="checkbox"
+                checked={glueSeal}
+                onChange={() => setGlueSeal(!glueSeal)}
+                />
+                : ฝากาว
+              </Label>
           </FormRow>
         )}
 
@@ -1008,32 +1010,32 @@ function NewOrderForm() {
            <Label>
               <input
                 type="checkbox"
-                checked={hasCap}
-                onChange={() => setHasCap(!hasCap)}
+                checked={showVcut}
+                onChange={() => setShowVcut(!showVcut)}
                 />
                 : ซ้าย
               </Label>
                <Label>
               <input
                 type="checkbox"
-                checked={hasCap}
-                onChange={() => setHasCap(!hasCap)}
+                checked={showVcut}
+                onChange={() => setShowVcut(!showVcut)}
                 />
                 : ขวา
               </Label>
                <Label>
               <input
                 type="checkbox"
-                checked={hasCap}
-                onChange={() => setHasCap(!hasCap)}
+                checked={showVcut}
+                onChange={() => setShowVcut(!showVcut)}
                 />
                 : บน
               </Label>
                <Label>
               <input
                 type="checkbox"
-                checked={hasCap}
-                onChange={() => setHasCap(!hasCap)}
+                checked={showVcut}
+                onChange={() => setShowVcut(!showVcut)}
                 />
                 : ล่าง
               </Label>
@@ -1084,8 +1086,8 @@ function NewOrderForm() {
             <Label>
               <input
                 type="checkbox"
-                checked={hasCap}
-                onChange={() => setHasCap(!hasCap)}
+                checked={glueSeal}
+                onChange={() => setGlueSeal(!glueSeal)}
                 />
                 : ฝากาว
               </Label>
@@ -1160,32 +1162,32 @@ function NewOrderForm() {
            <Label>
               <input
                 type="checkbox"
-                checked={hasCap}
-                onChange={() => setHasCap(!hasCap)}
+                checked={showVcut}
+                onChange={() => setShowVcut(!showVcut)}
                 />
                 : ซ้าย
               </Label>
                <Label>
               <input
                 type="checkbox"
-                checked={hasCap}
-                onChange={() => setHasCap(!hasCap)}
+                checked={showVcut}
+                onChange={() => setShowVcut(!showVcut)}
                 />
                 : ขวา
               </Label>
                <Label>
               <input
                 type="checkbox"
-                checked={hasCap}
-                onChange={() => setHasCap(!hasCap)}
+                checked={showVcut}
+                onChange={() => setShowVcut(!showVcut)}
                 />
                 : บน
               </Label>
                <Label>
               <input
                 type="checkbox"
-                checked={hasCap}
-                onChange={() => setHasCap(!hasCap)}
+                checked={showVcut}
+                onChange={() => setShowVcut(!showVcut)}
                 />
                 : ล่าง
               </Label>
@@ -1237,32 +1239,32 @@ function NewOrderForm() {
            <Label>
               <input
                 type="checkbox"
-                checked={hasCap}
-                onChange={() => setHasCap(!hasCap)}
+                checked={showVcut}
+                onChange={() => setShowVcut(!showVcut)}
                 />
                 : ซ้าย
               </Label>
                <Label>
               <input
                 type="checkbox"
-                checked={hasCap}
-                onChange={() => setHasCap(!hasCap)}
+                checked={showVcut}
+                onChange={() => setShowVcut(!showVcut)}
                 />
                 : ขวา
               </Label>
                <Label>
               <input
                 type="checkbox"
-                checked={hasCap}
-                onChange={() => setHasCap(!hasCap)}
+                checked={showVcut}
+                onChange={() => setShowVcut(!showVcut)}
                 />
                 : บน
               </Label>
                <Label>
               <input
                 type="checkbox"
-                checked={hasCap}
-                onChange={() => setHasCap(!hasCap)}
+                checked={showVcut}
+                onChange={() => setShowVcut(!showVcut)}
                 />
                 : ล่าง
               </Label>
@@ -1311,8 +1313,8 @@ function NewOrderForm() {
             <Label>
               <input
                 type="checkbox"
-                checked={hasCap}
-                onChange={() => setHasCap(!hasCap)}
+                checked={glueSeal}
+                onChange={() => setGlueSeal(!glueSeal)}
                 />
                 : ฝากาว
               </Label>
@@ -1343,32 +1345,32 @@ function NewOrderForm() {
            <Label>
               <input
                 type="checkbox"
-                checked={hasCap}
-                onChange={() => setHasCap(!hasCap)}
+                checked={showVcut}
+                onChange={() => setShowVcut(!showVcut)}
                 />
                 : ซ้าย
               </Label>
                <Label>
               <input
                 type="checkbox"
-                checked={hasCap}
-                onChange={() => setHasCap(!hasCap)}
+                checked={showVcut}
+                onChange={() => setShowVcut(!showVcut)}
                 />
                 : ขวา
               </Label>
                <Label>
               <input
                 type="checkbox"
-                checked={hasCap}
-                onChange={() => setHasCap(!hasCap)}
+                checked={showVcut}
+                onChange={() => setShowVcut(!showVcut)}
                 />
                 : บน
               </Label>
                <Label>
               <input
                 type="checkbox"
-                checked={hasCap}
-                onChange={() => setHasCap(!hasCap)}
+                checked={showVcut}
+                onChange={() => setShowVcut(!showVcut)}
                 />
                 : ล่าง
               </Label>
@@ -1417,8 +1419,8 @@ function NewOrderForm() {
             <Label>
               <input
                 type="checkbox"
-                checked={hasCap}
-                onChange={() => setHasCap(!hasCap)}
+                checked={glueSeal}
+                onChange={() => setGlueSeal(!glueSeal)}
                 />
                 : ฝากาว
               </Label>
@@ -1499,8 +1501,8 @@ function NewOrderForm() {
             <Label>
               <input
                 type="checkbox"
-                checked={hasCap}
-                onChange={() => setHasCap(!hasCap)}
+                checked={glueSeal}
+                onChange={() => setGlueSeal(!glueSeal)}
                 />
                 : ฝากาว
               </Label>
