@@ -932,25 +932,46 @@ function NewOrderForm() {
         )}
 
         {bagType === 'centerSeal' && (
-          <FormRow label="Vcut">
-            <Label>V-Cut :</Label>
-            <checkboxGroup>
-              {[': ซ้าย', ': ขวา', ': บน', ': ล่าง'].map((option) => (
-                <Label key={option}>
-                  <input
-                    type='checkbox'
-                    checked={vcutOptions.includes(option)}
-                    onChange={() => handleVcutChange(option)}
-                    />
-                    {option}
-                </Label>
-                ))}
-            </checkboxGroup>
-            
+          <FormRow>
+          <Label>V-Cut</Label>
+           <Label>
+              <input
+                type="checkbox"
+                checked={hasCap}
+                onChange={() => setHasCap(!hasCap)}
+                />
+                : ซ้าย
+              </Label>
+               <Label>
+              <input
+                type="checkbox"
+                checked={hasCap}
+                onChange={() => setHasCap(!hasCap)}
+                />
+                : ขวา
+              </Label>
+               <Label>
+              <input
+                type="checkbox"
+                checked={hasCap}
+                onChange={() => setHasCap(!hasCap)}
+                />
+                : บน
+              </Label>
+               <Label>
+              <input
+                type="checkbox"
+                checked={hasCap}
+                onChange={() => setHasCap(!hasCap)}
+                />
+                : ล่าง
+              </Label>
               <Label>ระยะจากปากซอง :</Label>
-              <Input type='text' placeholder='0.00'/>
-          </FormRow>
+            <Input type='text' placeholder='0.00'/>
+        </FormRow>
         )}
+
+
           {bagType === 'centerSeal' && (
           <FormRow>
             <Label>Optional :</Label>
@@ -978,53 +999,47 @@ function NewOrderForm() {
       
         )}
         
-        {bagType === 'centerSeal' && (
-          <FormRow label="spout">
-            <Label>
-              <input
-                type="checkbox"
-                checked={hasCap}
-                onChange={() => setHasCap(!hasCap)}
-                />
-                : จุกเปิด
-              </Label>
-          </FormRow>
-        )}
 
         {bagType ===  '3sideSeal' && (
           <FormRow>
             <Label>ซีลข้าง :</Label>
             <Input type='text' placeholder='0.00'/>
-            <Label>Optional :</Label>
-            <Label>V-Cut :</Label>
-            
-            <checkboxGroup>
-              {[': ซ้าย', ': ขวา', ': บน', ': ล่าง'].map((option) => (
-                <Label key={option}>
-                  <input
-                    type='checkbox'
-                    checked={vcutOptions.includes(option)}
-                    onChange={() => handleVcutChange(option)}
-                    />
-                    {option}
-                </Label>
-                ))}
-            </checkboxGroup>
-            </FormRow>
-        )}
-
-        {bagType === '3sideSeal' && (
-           <FormRow label="glueLid">
-            <Label>
+             <Label>V-Cut</Label>
+           <Label>
               <input
                 type="checkbox"
                 checked={hasCap}
                 onChange={() => setHasCap(!hasCap)}
                 />
-                : ฝากาว
+                : ซ้าย
               </Label>
-          </FormRow>
+               <Label>
+              <input
+                type="checkbox"
+                checked={hasCap}
+                onChange={() => setHasCap(!hasCap)}
+                />
+                : ขวา
+              </Label>
+               <Label>
+              <input
+                type="checkbox"
+                checked={hasCap}
+                onChange={() => setHasCap(!hasCap)}
+                />
+                : บน
+              </Label>
+               <Label>
+              <input
+                type="checkbox"
+                checked={hasCap}
+                onChange={() => setHasCap(!hasCap)}
+                />
+                : ล่าง
+              </Label>
+            </FormRow>
         )}
+
 
 
         {bagType === '3sideSeal' && (
@@ -1065,8 +1080,16 @@ function NewOrderForm() {
         )}
 
         {bagType === '3sideSeal' && (
-          <FormRow label="spout">
+         <FormRow>
             <Label>
+              <input
+                type="checkbox"
+                checked={hasCap}
+                onChange={() => setHasCap(!hasCap)}
+                />
+                : ฝากาว
+              </Label>
+               <Label>
               <input
                 type="checkbox"
                 checked={hasCap}
@@ -1133,19 +1156,39 @@ function NewOrderForm() {
 
          {bagType === '4sideSeal' && (
         <FormRow>
-            <Label>V-Cut :</Label>
-            <checkboxGroup>
-              {[': ซ้าย', ': ขวา', ': บน', ': ล่าง'].map((option) => (
-                <Label key={option}>
-                  <input
-                    type='checkbox'
-                    checked={vcutOptions.includes(option)}
-                    onChange={() => handleVcutChange(option)}
-                    />
-                    {option}
-                </Label>
-                ))}
-            </checkboxGroup>
+            <Label>V-Cut</Label>
+           <Label>
+              <input
+                type="checkbox"
+                checked={hasCap}
+                onChange={() => setHasCap(!hasCap)}
+                />
+                : ซ้าย
+              </Label>
+               <Label>
+              <input
+                type="checkbox"
+                checked={hasCap}
+                onChange={() => setHasCap(!hasCap)}
+                />
+                : ขวา
+              </Label>
+               <Label>
+              <input
+                type="checkbox"
+                checked={hasCap}
+                onChange={() => setHasCap(!hasCap)}
+                />
+                : บน
+              </Label>
+               <Label>
+              <input
+                type="checkbox"
+                checked={hasCap}
+                onChange={() => setHasCap(!hasCap)}
+                />
+                : ล่าง
+              </Label>
         </FormRow>
       )}  
 
@@ -1190,19 +1233,39 @@ function NewOrderForm() {
           <FormRow>
             <Label>ซีลข้าง :</Label>
             <Input type='text' placeholder='0.00'/>
-             <Label>V-Cut :</Label>
-            <checkboxGroup>
-              {[': ซ้าย', ': ขวา', ': บน', ': ล่าง'].map((option) => (
-                <Label key={option}>
-                  <input
-                    type='checkbox'
-                    checked={vcutOptions.includes(option)}
-                    onChange={() => handleVcutChange(option)}
-                    />
-                    {option}
-                </Label>
-                ))}
-            </checkboxGroup>
+             <Label>V-Cut</Label>
+           <Label>
+              <input
+                type="checkbox"
+                checked={hasCap}
+                onChange={() => setHasCap(!hasCap)}
+                />
+                : ซ้าย
+              </Label>
+               <Label>
+              <input
+                type="checkbox"
+                checked={hasCap}
+                onChange={() => setHasCap(!hasCap)}
+                />
+                : ขวา
+              </Label>
+               <Label>
+              <input
+                type="checkbox"
+                checked={hasCap}
+                onChange={() => setHasCap(!hasCap)}
+                />
+                : บน
+              </Label>
+               <Label>
+              <input
+                type="checkbox"
+                checked={hasCap}
+                onChange={() => setHasCap(!hasCap)}
+                />
+                : ล่าง
+              </Label>
           </FormRow>
         )}
 
@@ -1244,7 +1307,173 @@ function NewOrderForm() {
         )}
 
         {bagType === 'dieCut' && (
-           <FormRow label="glueLid">
+           <FormRow>
+            <Label>
+              <input
+                type="checkbox"
+                checked={hasCap}
+                onChange={() => setHasCap(!hasCap)}
+                />
+                : ฝากาว
+              </Label>
+               <Label>
+              <input
+                type="checkbox"
+                checked={hasCap}
+                onChange={() => setHasCap(!hasCap)}
+                />
+                : จุกเปิด
+              </Label>
+          </FormRow>
+        )}
+
+
+        {bagType === 'standupPouch' && (
+          <FormRow>
+             <Label>ซีลข้าง :</Label>
+            <Input type='text' placeholder='0.00'/>
+            <Label>ก้นตั้งลึก :</Label>
+            <Input type='text' placeholder='0.00'/>
+          </FormRow>
+        )}
+
+        {bagType === 'standupPouch' && (
+        <FormRow>
+          <Label>V-Cut</Label>
+           <Label>
+              <input
+                type="checkbox"
+                checked={hasCap}
+                onChange={() => setHasCap(!hasCap)}
+                />
+                : ซ้าย
+              </Label>
+               <Label>
+              <input
+                type="checkbox"
+                checked={hasCap}
+                onChange={() => setHasCap(!hasCap)}
+                />
+                : ขวา
+              </Label>
+               <Label>
+              <input
+                type="checkbox"
+                checked={hasCap}
+                onChange={() => setHasCap(!hasCap)}
+                />
+                : บน
+              </Label>
+               <Label>
+              <input
+                type="checkbox"
+                checked={hasCap}
+                onChange={() => setHasCap(!hasCap)}
+                />
+                : ล่าง
+              </Label>
+        </FormRow>
+      )}  
+
+        {bagType === 'standupPouch' && (
+          <FormRow>
+            <Label>Optional :</Label>
+            <RadioGroup>
+           {['ผีเสื้อ', 'รูกลม'].map((item) => (
+        <RadioLabel key={item}>
+        <input
+          type="radio"
+          name="layoutType"
+          value={item}
+          checked={formData.layoutType === item}
+          onChange={(e) => setFormData({ ...formData, layoutType: e.target.value })}
+        />
+        {item}
+        </RadioLabel>
+         ))}
+        </RadioGroup>
+            <Label>ขนาด :</Label>
+            <Input type='text' placeholder='0.00'/>
+            <Label>เจาะรูระบายอากาศ :</Label>
+            <Input type='text' placeholder='0.00'/>
+            <Label>ระยะจากปากซอง :</Label>
+            <Input type='text' placeholder='0.00'/>
+          </FormRow>
+        )}
+
+         {bagType === 'standupPouch' && (
+           <FormRow>
+            <Label>ระยะติดซิปจากปากซอง :</Label>
+            <Input type= 'text' placeholder='0.00'/>
+            <Label>ขนาดซิป :</Label>
+            <Input type='text' placeholder='0.00'/>
+            <Label>ติดวาวล์ :</Label>
+            <Input type='text' placeholder='0.00'/>
+          </FormRow>
+        )}
+
+        {bagType === 'standupPouch' && (
+           <FormRow>
+            <Label>
+              <input
+                type="checkbox"
+                checked={hasCap}
+                onChange={() => setHasCap(!hasCap)}
+                />
+                : ฝากาว
+              </Label>
+               <Label>
+              <input
+                type="checkbox"
+                checked={hasCap}
+                onChange={() => setHasCap(!hasCap)}
+                />
+                : จุกเปิด
+              </Label>
+          </FormRow>
+        )}
+
+        
+
+        {bagType === 'softLoop' && (
+          <FormRow>
+            <Label>พับข้าง :</Label>
+            <Input type='text' placeholder='0.00'/>
+             <Label>พับล่าง :</Label>
+            <Input type='text' placeholder='0.00'/>
+          </FormRow>
+        )}
+
+         {bagType === 'softLoop' && (
+          <FormRow>
+            <Label>Optional :</Label>
+            <RadioGroup>
+           {['ผีเสื้อ', 'รูกลม'].map((item) => (
+        <RadioLabel key={item}>
+        <input
+          type="radio"
+          name="layoutType"
+          value={item}
+          checked={formData.layoutType === item}
+          onChange={(e) => setFormData({ ...formData, layoutType: e.target.value })}
+        />
+        {item}
+        </RadioLabel>
+         ))}
+        </RadioGroup>
+            <Label>ขนาด :</Label>
+            <Input type='text' placeholder='0.00'/>
+            <Label>ระยะจากปากซอง :</Label>
+            <Input type='text' placeholder='0.00'/>
+          </FormRow>
+        )}
+
+        {bagType === 'softLoop' && (
+          <FormRow>
+            <Label>ระยะติดซิปจากปากซอง :</Label>
+            <Input type= 'text' placeholder='0.00'/>
+            <Label>ขนาดซิป :</Label>
+            <Input type='text' placeholder='0.00'/>
             <Label>
               <input
                 type="checkbox"
@@ -1256,23 +1485,25 @@ function NewOrderForm() {
           </FormRow>
         )}
 
-        {bagType === 'dieCut' && (
-           <FormRow label="spout">
+        {bagType === 'glueLid' && (
+          <FormRow>
+            <Label>พับข้าง :</Label>
+            <Input type='text' placeholder='0.00'/>
+            <Label>พับล่าง :</Label>
+            <Input type='text' placeholder='0.00'/>
+          </FormRow>
+        )}
+
+         {bagType === 'glueLid' && (
+          <FormRow>
             <Label>
               <input
                 type="checkbox"
                 checked={hasCap}
                 onChange={() => setHasCap(!hasCap)}
                 />
-                : จุกเปิด
+                : ฝากาว
               </Label>
-          </FormRow>
-        )}
-
-        {bagType === 'standupPouch' && (
-          <FormRow>
-             <Label>ซีลข้าง :</Label>
-            <Input type='text' placeholder='0.00'/>
           </FormRow>
         )}
    </>
