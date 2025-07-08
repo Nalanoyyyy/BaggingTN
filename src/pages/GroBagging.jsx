@@ -1,5 +1,5 @@
 // pages/GroBagging.jsx
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import GorTopBar from '../components/Gor/GorTopbar';
 import GorTableSection from '../components/Gor/GorTableSectionX';
@@ -17,6 +17,10 @@ const PageWrapper = styled.div`
 function GroBagging() {
   const [filters, setFilters] = useState(null);
 
+useEffect(() => {
+    document.title = 'กรอพิมพ์ - Bagging | ThaiNam';
+    console.log('Loaded: GroBagging');
+  }, []);
 
   return (
     <PageWrapper>

@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import AddModal from './QCAddModal';
 import SearchMenuButton from '../SearchMenuButton';
 import TopBar from './QCTopBar';
-
+import Sidebar from '../Sidebar';
 const TableWrapper = styled.div`
   padding: 24px 32px;
 `;

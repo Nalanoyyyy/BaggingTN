@@ -367,14 +367,11 @@ function NewOrderForm() {
     <FormRowFourColumn>
       <FormRow>
         <Label>กำหนดส่ง :</Label>
-      <Input
-        type="text"
-        value={formData.deliveryDate}
-        onChange={(e) =>
-          setFormData({ ...formData, deliveryDate: e.target.value })
-        }
-        placeholder="...."
-      />
+       <Input
+      type="date"
+      value={formData.deliveryDate}
+      onChange={(e) => setFormData({ ...formData, deliveryDate: e.target.value })}
+    />
       </FormRow>
 
       <FormRow>
@@ -660,9 +657,9 @@ function NewOrderForm() {
         <Label>คูณ :</Label>
       <Input
         type="text"
-        value={formData.multiplySymbol}
+        value={formData.multiplySymbol1}
         onChange={(e) =>
-          setFormData({ ...formData, multiplySymbol: e.target.value })
+          setFormData({ ...formData, multiplySymbol1: e.target.value })
         }
         placeholder="0.00..."
       />
@@ -672,9 +669,9 @@ function NewOrderForm() {
         <Label>แถว :</Label>
       <Input
         type="text"
-        value={formData.rowCount}
+        value={formData.rowCount1}
         onChange={(e) =>
-          setFormData({ ...formData, rowCount: e.target.value })
+          setFormData({ ...formData, rowCount1: e.target.value })
         }
         placeholder="0.00..."
       />
