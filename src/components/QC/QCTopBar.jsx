@@ -31,6 +31,7 @@ const ButtonGroup = styled.div`
   display: flex;
   gap: 12px;
   position: relative;
+  z-index: 1001;
 `;
 
 const SearchBox = styled.div`
@@ -84,13 +85,16 @@ const SearchButton = styled.button`
   }
 `;
 
+
 export default function QCTopBar({ searchButton }) {
   return (
     <TopBarContainer>
+      <LeftGroup>
         <Title>QC BAGGING</Title>
-        <ButtonGroup>
-          {searchButton} {/* ✅ ปุ่มค้นหาจริง */}
-        </ButtonGroup>
+      </LeftGroup>
+      <ButtonGroup>
+        {searchButton}
+      </ButtonGroup>
     </TopBarContainer>
   );
 }

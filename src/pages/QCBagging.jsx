@@ -5,9 +5,15 @@ import QCTableSection from '../components/QC/QCTableSection';
 import SearchMenuButton from '../components/QC/SearchMenuButton';
 
 const PageContainer = styled.div`
+  display: flex;
+  flex-direction: column; 
+  height: 100vh;
+`;
+
+const ContentWrapper = styled.div`
+  flex: 1;
   background-color: #f8f8f8;
-  min-height: 100vh;
-  padding: 24px;
+  overflow: auto;
 `;
 
 function QCBagging() {

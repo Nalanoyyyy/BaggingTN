@@ -20,6 +20,7 @@ const IconButton = styled.button`
   align-items: center;
   font-size: 18px;
   cursor: pointer;
+   z-index: 1001;
 `;
 
 const SearchBox = styled.div`
@@ -32,11 +33,7 @@ const SearchBox = styled.div`
   border: 4px solidrgb(130, 182, 216);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   width: 260px;
-  min-height: 200px;
-  display: ${({ $show }) => ($show ? 'flex' : 'none')};
-  flex-direction: column;
-  gap: 14px;
-  z-index: 99999;
+  z-index: 1002;
 `;
 
 const Input = styled.input`
@@ -60,7 +57,7 @@ const Header = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 24px;
-  position: relative; // ✅ สำคัญมาก!!
+  position: relative;
   z-index: 2;
 `;
 
@@ -76,24 +73,13 @@ function SearchMenuButton({ onSearch }) {
   };
 
   return (
-    <>
-      <IconButton onClick={() => setOpen(!open)}>
+    <Wrapper>
+      <IconButton onClick={() => setOpen(!open)} style={{ position: 'relative', zIndex: 1001}}>
         <FaSearch />
       </IconButton>
 
-      {/* ย้าย SearchBox ออกมาแสดงท้ายสุดของหน้า */}
       {open && (
-        <div style={{
-          position: 'fixed',
-          top: '80px',
-          right: '40px',
-          background: '#e0e4fa',
-          padding: '24px 20px',
-          borderRadius: '12px',
-          boxShadow: '0 8px 20px rgba(0, 0, 0, 0.1)',
-          zIndex: 9999,
-          width: '280px'
-        }}>
+        <SearchBox>
           <label>เลขที่ใบสั่ง:</label>
           <Input
             value={keyword}
@@ -107,10 +93,11 @@ function SearchMenuButton({ onSearch }) {
             placeholder="2025"
           />
           <SearchBtn onClick={handleSearch}>ค้นหา</SearchBtn>
-        </div>
+        </SearchBox>
       )}
-    </>
+    </Wrapper>
   );
 }
+
 
 export default SearchMenuButton;

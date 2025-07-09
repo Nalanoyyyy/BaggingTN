@@ -105,7 +105,7 @@ function Sidebar({ isOpen, onClose }) {
               <SubItem to="/qc/drylaminate2">Dry 2</SubItem>
               <SubItem to="/qc/drylaminate3">Dry 3</SubItem>
               <SubItem to="/qc/extrusion1">Ext 1</SubItem>
-              <SubItem to="/qc//extrusion2">Ext 2</SubItem>
+              <SubItem to="/qc/extrusion2">Ext 2</SubItem>
               <SubItem to="/qc/slitting">Slitting</SubItem>
               <SubItem to="/qc/bagging">Bagging</SubItem>
             </SubMenu>
@@ -144,41 +144,41 @@ function Sidebar({ isOpen, onClose }) {
               ข้อมูล <span>{openSection === 'ข้อมูล'? '▾' : '▸'}</span>
             </Section>
             <SubMenu open={openSection === 'ข้อมูล'}>
-              <SubItem to="ข้อมูล/productionMapping">ผังติดตามการผลิต</SubItem>
+              <SubItem to="/ข้อมูล/productionMapping">ผังติดตามการผลิต</SubItem>
             </SubMenu>
           
             <Section onClick={() => toggleSection('ใบสั่งจบการผลิต')}>
               ใบสั่งจบการผลิต <span>{openSection === 'ใบสั่งจบการผลิต'? '▾' : '▸'}</span>
             </Section>
             <SubMenu open={openSection === 'ใบสั่งจบการผลิต'}>
-              <SubItem to="ใบสั่งจบการผลิต/digital">Digital</SubItem>
-              <SubItem to="ใบสั่งจบการผลิต/printing">Printing</SubItem>
-              <SubItem to="ใบสั่งจบการผลิต/drylaminate1">Dry 1</SubItem>
-              <SubItem to="ใบสั่งจบการผลิต/drylaminate2">Dry 2</SubItem>
-              <SubItem to="ใบสั่งจบการผลิต/drylaminate3">Dry 3</SubItem>
-              <SubItem to="ใบสั่งจบการผลิต/extrusion1">Ext 1</SubItem>
-              <SubItem to="ใบสั่งจบการผลิต/extrusion2">Ext 2</SubItem>
-              <SubItem to="ใบสั่งจบการผลิต/siltting">Slitting</SubItem>
-              <SubItem to="ใบสั่งจบการผลิต/bagging">Bagging</SubItem>
+              <SubItem to="/ใบสั่งจบการผลิต/digital">Digital</SubItem>
+              <SubItem to="/ใบสั่งจบการผลิต/printing">Printing</SubItem>
+              <SubItem to="/ใบสั่งจบการผลิต/drylaminate1">Dry 1</SubItem>
+              <SubItem to="/ใบสั่งจบการผลิต/drylaminate2">Dry 2</SubItem>
+              <SubItem to="/ใบสั่งจบการผลิต/drylaminate3">Dry 3</SubItem>
+              <SubItem to="/ใบสั่งจบการผลิต/extrusion1">Ext 1</SubItem>
+              <SubItem to="/ใบสั่งจบการผลิต/extrusion2">Ext 2</SubItem>
+              <SubItem to="/ใบสั่งจบการผลิต/siltting">Slitting</SubItem>
+              <SubItem to="/ใบสั่งจบการผลิต/bagging">Bagging</SubItem>
             </SubMenu>
       
             <Section onClick={() => toggleSection('ของเสีย')}>
               ของเสีย <span>{openSection === 'ของเสีย'? '▾' : '▸'}</span>
             </Section>
             <SubMenu open={openSection === 'ของเสีย'}>
-              <SubItem to="ของเสีย/setupWaste">ของเสียตั้งงาน</SubItem>
-              <SubItem to="ของเสีย/processWaste">ของเสียกระบวนการ</SubItem>
-              <SubItem to="ของเสีย/returnedWaste">ของเสียส่งคืน</SubItem>
+              <SubItem to="/ของเสีย/setupWaste">ของเสียตั้งงาน</SubItem>
+              <SubItem to="/ของเสีย/processWaste">ของเสียกระบวนการ</SubItem>
+              <SubItem to="/ของเสีย/returnedWaste">ของเสียส่งคืน</SubItem>
             </SubMenu>
 
             <Section onClick={() => toggleSection('รายงาน')}> 
               รายงาน <span>{openSection === 'รายงาน'? '▾' : '▸'}</span>
             </Section>
             <SubMenu open={openSection === 'รายงาน'}>
-              <SubItem to="รายงาน/monthlyReport">ประจำเดือน</SubItem>
-              <SubItem to="รายงาน/monthlyStats">สถิติ</SubItem>
-              <SubItem to="รายงาน/processWaste">ของเสียกระบวนการ</SubItem>
-              <SubItem to="รายงาน/returnedWaste">ของเสียส่งคืน</SubItem>
+              <SubItem to="/รายงาน/monthlyReport">ประจำเดือน</SubItem>
+              <SubItem to="/รายงาน/monthlyStats">สถิติ</SubItem>
+              <SubItem to="/รายงาน/processWaste">ของเสียกระบวนการ</SubItem>
+              <SubItem to="/รายงาน/returnedWaste">ของเสียส่งคืน</SubItem>
             </SubMenu>
           </>
         )}
