@@ -207,6 +207,10 @@ function NewOrderForm() {
   const [hasCap, setHasCap] = useState(false);
   const [showVcut, setShowVcut] = useState(false);
   const [glueSeal, setGlueSeal] = useState(false);
+  const [vcutLeft, setVcutLeft] = useState(false);
+  const [vcutRight, setVcutRight] = useState(false);
+  const [vcutTop, setVcutTop] = useState(false);
+  const [vcutBottom, setVcutBottom] = useState(false);
   
   const [formData, setFormData] = useState({
     PL: '',
@@ -936,32 +940,32 @@ function NewOrderForm() {
            <Label>
               <input
                 type="checkbox"
-                checked={hasCap}
-                onChange={() => setHasCap(!hasCap)}
+                checked={vcutLeft}
+                onChange={() => setVcutLeft(!vcutLeft)}
                 />
                 : ซ้าย
               </Label>
                <Label>
               <input
                 type="checkbox"
-                checked={hasCap}
-                onChange={() => setHasCap(!hasCap)}
+                checked={vcutRight}
+                onChange={() => setVcutRight(!vcutRight)}
                 />
                 : ขวา
               </Label>
                <Label>
               <input
                 type="checkbox"
-                checked={hasCap}
-                onChange={() => setHasCap(!hasCap)}
+                checked={vcutTop}
+                onChange={() => setVcutTop(!vcutTop)}
                 />
                 : บน
               </Label>
                <Label>
               <input
                 type="checkbox"
-                checked={hasCap}
-                onChange={() => setHasCap(!hasCap)}
+                checked={vcutBottom}
+                onChange={() => setVcutBottom(!vcutBottom)}
                 />
                 : ล่าง
               </Label>
@@ -1007,32 +1011,32 @@ function NewOrderForm() {
            <Label>
               <input
                 type="checkbox"
-                checked={showVcut}
-                onChange={() => setShowVcut(!showVcut)}
+                checked={vcutLeft}
+                onChange={() => setVcutLeft(!vcutLeft)}
                 />
                 : ซ้าย
               </Label>
                <Label>
               <input
                 type="checkbox"
-                checked={showVcut}
-                onChange={() => setShowVcut(!showVcut)}
+                checked={vcutRight}
+                onChange={() => setVcutRight(!vcutRight)}
                 />
                 : ขวา
               </Label>
                <Label>
               <input
                 type="checkbox"
-                checked={showVcut}
-                onChange={() => setShowVcut(!showVcut)}
+                checked={vcutTop}
+                onChange={() => setVcutTop(!vcutTop)}
                 />
                 : บน
               </Label>
                <Label>
               <input
                 type="checkbox"
-                checked={showVcut}
-                onChange={() => setShowVcut(!showVcut)}
+                checked={vcutBottom}
+                onChange={() => setVcutBottom(!vcutBottom)}
                 />
                 : ล่าง
               </Label>
@@ -1155,36 +1159,36 @@ function NewOrderForm() {
 
          {bagType === '4sideSeal' && (
         <FormRow>
-            <Label>V-Cut</Label>
+          <Label>V-Cut</Label>
            <Label>
               <input
                 type="checkbox"
-                checked={showVcut}
-                onChange={() => setShowVcut(!showVcut)}
+                checked={vcutLeft}
+                onChange={() => setVcutLeft(!vcutLeft)}
                 />
                 : ซ้าย
               </Label>
                <Label>
               <input
                 type="checkbox"
-                checked={showVcut}
-                onChange={() => setShowVcut(!showVcut)}
+                checked={vcutRight}
+                onChange={() => setVcutRight(!vcutRight)}
                 />
                 : ขวา
               </Label>
                <Label>
               <input
                 type="checkbox"
-                checked={showVcut}
-                onChange={() => setShowVcut(!showVcut)}
+                checked={vcutTop}
+                onChange={() => setVcutTop(!vcutTop)}
                 />
                 : บน
               </Label>
                <Label>
               <input
                 type="checkbox"
-                checked={showVcut}
-                onChange={() => setShowVcut(!showVcut)}
+                checked={vcutBottom}
+                onChange={() => setVcutBottom(!vcutBottom)}
                 />
                 : ล่าง
               </Label>
@@ -1236,32 +1240,32 @@ function NewOrderForm() {
            <Label>
               <input
                 type="checkbox"
-                checked={showVcut}
-                onChange={() => setShowVcut(!showVcut)}
+                checked={vcutLeft}
+                onChange={() => setVcutLeft(!vcutLeft)}
                 />
                 : ซ้าย
               </Label>
                <Label>
               <input
                 type="checkbox"
-                checked={showVcut}
-                onChange={() => setShowVcut(!showVcut)}
+                checked={vcutRight}
+                onChange={() => setVcutRight(!vcutRight)}
                 />
                 : ขวา
               </Label>
                <Label>
               <input
                 type="checkbox"
-                checked={showVcut}
-                onChange={() => setShowVcut(!showVcut)}
+                checked={vcutTop}
+                onChange={() => setVcutTop(!vcutTop)}
                 />
                 : บน
               </Label>
                <Label>
               <input
                 type="checkbox"
-                checked={showVcut}
-                onChange={() => setShowVcut(!showVcut)}
+                checked={vcutBottom}
+                onChange={() => setVcutBottom(!vcutBottom)}
                 />
                 : ล่าง
               </Label>
@@ -1342,32 +1346,32 @@ function NewOrderForm() {
            <Label>
               <input
                 type="checkbox"
-                checked={showVcut}
-                onChange={() => setShowVcut(!showVcut)}
+                checked={vcutLeft}
+                onChange={() => setVcutLeft(!vcutLeft)}
                 />
                 : ซ้าย
               </Label>
                <Label>
               <input
                 type="checkbox"
-                checked={showVcut}
-                onChange={() => setShowVcut(!showVcut)}
+                checked={vcutRight}
+                onChange={() => setVcutRight(!vcutRight)}
                 />
                 : ขวา
               </Label>
                <Label>
               <input
                 type="checkbox"
-                checked={showVcut}
-                onChange={() => setShowVcut(!showVcut)}
+                checked={vcutTop}
+                onChange={() => setVcutTop(!vcutTop)}
                 />
                 : บน
               </Label>
                <Label>
               <input
                 type="checkbox"
-                checked={showVcut}
-                onChange={() => setShowVcut(!showVcut)}
+                checked={vcutBottom}
+                onChange={() => setVcutBottom(!vcutBottom)}
                 />
                 : ล่าง
               </Label>
