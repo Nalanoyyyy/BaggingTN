@@ -398,12 +398,11 @@ function NewOrderForm() {
         onChange={(e) => setOrderAmount(e.target.value)}
         placeholder="ระบุจำนวน"
       />
-      <Select value={unit} onChange={(e) => setUnit(e.target.value)}>
-        <option value="PIECE">PIECE</option>
-        <option value="KG">KG</option>
-        <option value="ROLL">ROLL</option>
-        <option value="เมตร">เมตร</option>
-         <option value="ม้วน">ม้วน</option>
+      <Select value={formData.count} onChange={(e) => setFormData({...formData, count:gie.target.value})}>
+        <option value="Piece">ชิ้น</option>
+        <option value="Kg">กิโลกรัม</option>
+        <option value="Roll">ม้วน</option>
+        <option value="Meter">เมตร</option>
       </Select>
     </FormRow>
     </FormRowFourColumn>
